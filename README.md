@@ -1,6 +1,6 @@
 # Leishmania Mundinia Genomes Assembly and Annotation Pipeline (LMGAAP)
 
-[Hatim Almutairi](hatim.almutiairi@hotmail.com) 2021
+[Hatim Almutairi](mailto:hatim.almutiairi@hotmail.com) 2021
 
 This repository was made for the purpose of reproducing de novo Genome assembly and annotation for the following genomes:
  - [Leishmania (Mundinia) martiniquensis strain: LV760 (isolate:LSCM1)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691531): [NCBI Assembly](https://identifiers.org/insdc.gca:)
