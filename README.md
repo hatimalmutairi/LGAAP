@@ -22,7 +22,7 @@ This repository was made for the purpose of reproducing de novo Genome assembly 
 This repository contains An automated pipline for the assembly and annotation of six Leishmania genomes and was writen and excuted using [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html).
 
 ### Friendly warning
-Running the pipeline requires more that 500GB of free sapce including 140GB from SRAs alone.
+Running the pipeline requires around 500GB of free space including 140GB for SRAs.
 
 ## How to use
  1. Use  ```git clone``` command to clone the repository to your working directory. you can also download it from [Lancaster University Research Directory]() or from [here]()
