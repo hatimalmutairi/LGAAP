@@ -1,0 +1,4 @@
+channels:
+ - bioconda
+dependencies:
+ - funannotate=1.7.1

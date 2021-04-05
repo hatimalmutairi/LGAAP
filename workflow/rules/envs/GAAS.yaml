@@ -1,0 +1,5 @@
+channels:
+ - bioconda
+dependencies:
+ - gaas=1.2.0
+ - agat=0.6.0

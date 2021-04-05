@@ -1,0 +1,5 @@
+channels:
+ - bioconda
+dependencies:
+ - quast=5.0.2
+ - busco=5.0.0

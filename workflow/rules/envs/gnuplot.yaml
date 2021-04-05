@@ -1,0 +1,4 @@
+channels:
+ - bioconda
+dependencies:
+ - gnuplot=5.0.4 
