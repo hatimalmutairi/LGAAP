@@ -16,7 +16,7 @@ This repository was made for the purpose of reproducing de novo Genome assembly 
 - [LMGAAP on Github](https://github.com/hatimalmutairi/LMGAAP.git)
 
 ## Pipeline Outline
-![Pipeline Outline](https://github.com/hatimalmutairi/Genome_Assembly_Pipline/blob/main/Pipline_Outline.png)
+![Pipeline Outline](https://github.com/hatimalmutairi/LMGAAP/blob/main/Pipline_Outline.png)
 
 ## Content
 This repository contains An automated pipline for the assembly and annotation of six Leishmania genomes and was writen and excuted using [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html).
