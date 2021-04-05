@@ -3,16 +3,14 @@
 [Hatim Almutairi](mailto:hatim.almutiairi@hotmail.com) 2021
 
 This repository was made for the purpose of reproducing de novo Genome assembly and annotation for the following genomes:
- - [Leishmania (Mundinia) martiniquensis strain: LV760 (isolate:LSCM1)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691531): [NCBI Assembly](https://identifiers.org/insdc.gca:)
- - [Leishmania (Mundinia) orientalis strain: LV768 (isolate:LSCM4)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691532): [NCBI Assembly](https://identifiers.org/insdc.gca:)
- - [Leishmania (Mundinia) enrietti strain: LV763 (isolate:CUR178)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691534): [NCBI Assembly](https://identifiers.org/insdc.gca:)
- - [Leishmania sp. Ghana strain: LV757 (isolate:GH5)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691536): [NCBI Assembly](https://identifiers.org/insdc.gca:)
- - [Leishmania (Mundinia) sp. Namibia strain: LV425 (isolate:253)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA689706): [NCBI Assembly](https://identifiers.org/insdc.gca:)
- - [Porcisia hertigi strain: LV43 (isolate:C119)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691541): [NCBI Assembly](https://identifiers.org/insdc.gca:)
+ - [Leishmania (Mundinia) martiniquensis strain: LV760 (isolate:LSCM1)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691531)
+ - [Leishmania (Mundinia) orientalis strain: LV768 (isolate:LSCM4)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691532)
+ - [Leishmania (Mundinia) enrietti strain: LV763 (isolate:CUR178)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691534)
+ - [Leishmania sp. Ghana strain: LV757 (isolate:GH5)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691536)
+ - [Leishmania (Mundinia) sp. Namibia strain: LV425 (isolate:253)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA689706)
+ - [Porcisia hertigi strain: LV43 (isolate:C119)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691541)
 
 ## References:
-- [ref1](https://www.test.com)
-- [ref2](https://www.test.com)
 - [LMGAAP on Github](https://github.com/hatimalmutairi/LMGAAP.git)
 
 ## Pipeline Outline
