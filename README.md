@@ -1,5 +1,7 @@
 # Leishmania Mundinia Genomes Assembly and Annotation Pipeline (LMGAAP)
 
+[![DOI](https://zenodo.org/badge/354961794.svg)](https://zenodo.org/badge/latestdoi/354961794)
+
 [Hatim Almutairi](mailto:hatim.almutiairi@hotmail.com) 2021
 
 This repository was made for the purpose of reproducing de novo Genome assembly and annotation for the following genomes:
