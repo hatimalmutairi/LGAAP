@@ -12,8 +12,6 @@ This repository was made for the purpose of reproducing de novo Genome assembly 
  - [Leishmania (Mundinia) sp. Namibia strain: LV425 (isolate:253)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017918225.1)
  - [Porcisia hertigi strain: LV43 (isolate:C119)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017918235.1)
 
-## References:
-- [LMGAAP on Github](https://github.com/hatimalmutairi/LMGAAP.git)
 
 ## Pipeline Outline
 ![Pipeline Outline](https://github.com/hatimalmutairi/LMGAAP/blob/main/Pipline_Outline.png)
