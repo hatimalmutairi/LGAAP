@@ -5,12 +5,12 @@
 [Hatim Almutairi](mailto:hatim.almutiairi@hotmail.com) 2021
 
 This repository was made for the purpose of reproducing de novo Genome assembly and annotation for the following genomes:
- - [Leishmania (Mundinia) martiniquensis strain: LV760 (isolate:LSCM1)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691531)
- - [Leishmania (Mundinia) orientalis strain: LV768 (isolate:LSCM4)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691532)
- - [Leishmania (Mundinia) enrietti strain: LV763 (isolate:CUR178)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691534)
- - [Leishmania sp. Ghana strain: LV757 (isolate:GH5)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691536)
- - [Leishmania (Mundinia) sp. Namibia strain: LV425 (isolate:253)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA689706)
- - [Porcisia hertigi strain: LV43 (isolate:C119)](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA691541)
+ - [Leishmania (Mundinia) martiniquensis strain: LV760 (isolate:LSCM1)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017916325.1)
+ - [Leishmania (Mundinia) orientalis strain: LV768 (isolate:LSCM4)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017916335.1)
+ - [Leishmania (Mundinia) enrietti strain: LV763 (isolate:CUR178)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017916305.1)
+ - [Leishmania sp. Ghana strain: LV757 (isolate:GH5)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017918215.1)
+ - [Leishmania (Mundinia) sp. Namibia strain: LV425 (isolate:253)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017918225.1)
+ - [Porcisia hertigi strain: LV43 (isolate:C119)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017918235.1)
 
 ## References:
 - [LMGAAP on Github](https://github.com/hatimalmutairi/LMGAAP.git)
@@ -25,6 +25,7 @@ This repository contains An automated pipline for the assembly and annotation of
 Running the pipeline requires around 500GB of free space including 140GB for SRAs.
 
 ## How to use
+Before you start, make sure that [docker software](https://docs.docker.com/get-docker/) is already installed in your machine. 
  1. Use  ```git clone``` command to clone the repository to your working directory. you can also download it from [Lancaster University Research Directory]() or from [here]()
 ```sh
 $ git clone https://github.com/hatimalmutairi/LMGAAP.git
