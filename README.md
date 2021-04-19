@@ -19,7 +19,7 @@ This repository was made for the purpose of reproducing de novo Genome assembly 
 ![Pipeline Outline](https://github.com/hatimalmutairi/LMGAAP/blob/main/Pipline_Outline.png)
 
 ## Content
-This repository contains An automated pipline for the assembly and annotation of six Leishmania genomes and was writen and excuted using [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html).
+This repository contains An automated pipline for the assembly and annotation of six Leishmania genomes and was writen and excuted using [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html). the pipeline run 314 steps to complete. 
 
 ### Friendly warning
 Running the pipeline requires around 500GB of free space including 140GB for SRAs.
@@ -59,4 +59,4 @@ For further instrucion how to use snakemake, visit [Sankemake](https://snakemake
  - The final assemblies with annotated proteins and transcripts will be in ```results/annotation/{sample}/Final_Annotation/```
 
 ## Estimated Time of run
-We tried running the pipeline on a 24 cpu machine and 120 RAM of memory. The entire process took about 15377 minutes (around 10 days). The evidence based annotation round took the majority of running time as each genome take around 30 hours to complete. 
+We tried running the pipeline on a 24 cpu machine and 120 RAM of memory. The entire process took about 15377 minutes (around 10 days). The evidence based annotation round took the majority of running time as each genome take around 30 hours to complete.
