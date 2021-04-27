@@ -57,4 +57,4 @@ For further instrucion how to use snakemake, visit [Sankemake](https://snakemake
  - The final assemblies with annotated proteins and transcripts will be in ```results/annotation/{sample}/Final_Annotation/```
 
 ## Estimated Time of run
-We tried running the pipeline on a 24 cpu machine and 120 RAM of memory. The entire process took about 15377 minutes (around 10 days). The evidence based annotation round took the majority of running time as each genome take around 30 hours to complete.
+We tried running the pipeline on a 24 cpu machine and 120 RAM of memory. The entire process took about 15377 minutes (around 10 days). The evidence based annotation round took the majority of running time as each genome took around 30 hours to complete.
