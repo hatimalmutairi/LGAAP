@@ -1,6 +1,6 @@
 # LGAAP: Leishmaniinae Genome Assembly and Annotation Pipeline
 
-[![DOI](https://zenodo.org/badge/354961794.svg)](https://zenodo.org/badge/latestdoi/354961794) 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4707445.svg)](https://doi.org/10.5281/zenodo.4707445)
 
 [Hatim Almutairi](mailto:hatim.almutiairi@hotmail.com) 2021
 
