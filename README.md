@@ -6,17 +6,15 @@
 
 This repository was made for the purpose of reproducing *de novo* Genome assembly and annotation for the following genomes:
  - [*Leishmania (Mundinia) martiniquensis* strain: LV760 (isolate:LSCM1)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017916325.1)
- - [*Leishmania (Mundinia) orientalis* strain: LV768 (isolate:LSCM4)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017916335.1)
- - [*Leishmania (Mundinia) enriettii* strain: LV763 (isolate:CUR178)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017916305.1)
- - [*Leishmania (Mundinia) sp.* Ghana strain: LV757 (isolate:GH5)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017918215.1)
- - [*Leishmania (Mundinia) sp.* Namibia strain: LV425 (isolate:253)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017918225.1)
+ - [*L. (M.) orientalis* strain: LV768 (isolate:LSCM4)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017916335.1)
+ - [*L. (M.) enriettii* strain: LV763 (isolate:CUR178)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017916305.1)
+ - [*L. (M.) sp.* Ghana strain: LV757 (isolate:GH5)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017918215.1)
+ - [*L. (M.) sp.* Namibia strain: LV425 (isolate:253)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017918225.1)
  - [*Porcisia hertigi* strain: LV43 (isolate:C119)](https://www.ncbi.nlm.nih.gov/assembly/GCA_017918235.1)
-
 
 ## Pipeline Outline
 ![Pipeline Outline](https://github.com/hatimalmutairi/LGAAP/blob/main/Pipline_Outline.png)
 
-## Content
 This repository contains An automated pipline for the assembly and annotation of six *Leishmaniinae* genomes and was writen and excuted using [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html). the pipeline run [314 steps](https://github.com/hatimalmutairi/LGAAP/blob/main/rulegraph.svg) to complete. 
 
 ### Friendly warning
@@ -57,13 +55,18 @@ For further instrucion how to use snakemake, visit [Sankemake](https://snakemake
 ```results/annotation/{sample}/Final_Annotation/ ``` contains the final assemblies with annotated proteins and transcripts.
 
 ## Estimated Time of run
-We used a virtual machine with 24 CPUs and 120 GB of RAM to run this pipeline. It took [15377 minutes to complete the job](https://github.com/hatimalmutairi/LGAAP/blob/main/Runtime.png) (around 10 days). The evidence-based annotation took up the majority of the time, taking about 30 hours to finish for each genome.
+This pipeline was tested successfully on a virtual machine with Ubuntu 18.04.5 LTS, 24 CPUs, and 120 GB of RAM. The job took 15377 minutes to complete (around 10 days). The evidence-based annotation took up the majority of the time, taking about 30 hours to finish for each genome.
 
-## Pipeline blueprint
-Each genome assembly was created in a sperate exctuion file (all of them can be seen in ```workflow/rules``` directory) 
+![Runtime](https://github.com/hatimalmutairi/LGAAP/blob/main/Runtime.png)
+
+Each genome assembly was created in a sperate exctuion file (all of them can be seen in ```workflow/rules``` directory). 
+
+- [All rules details](https://github.com/hatimalmutairi/LGAAP/tree/main/workflow/rules)  
+- [All softwres used](https://github.com/hatimalmutairi/LGAAP/tree/main/workflow/rules/envs)
 
 Take note that the following command lines were included to demonstrate the main commands; however, attempting to use them directly may fail because the majority of the commands were configured to be executed inside either a conda environment or a docker container. Rather than that, it is recommended to run the snakemake piplene commands, which will take care of all software and its dependencies.
 
+## Command-lines
 1. Assembly using [Flye](https://github.com/fenderglass/Flye) (v2.8.2)
 ```sh
 flye --nano-raw {input.longreads} --genome-size 35m --threads {threads} -o {output}
