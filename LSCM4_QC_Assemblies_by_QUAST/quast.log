@@ -1,0 +1,91 @@
+/usr/local/lib/python2.7/site-packages/quast-5.0.1-py2.7.egg-info/scripts/quast.py --eukaryote --circos --threads 24 --output-dir results/LSCM4_QC_Assemblies_by_QUAST results/LSCM4_Assembly_LongRead_by_Flye/assembly.fasta results/LSCM4_Assembly_LongRead_by_Flye/Flye_consensus.fasta results/LSCM4_Polish_Assembly_by_Pilon/pilon.fasta results/LSCM4_Polish_Assembly_by_Pilon/Pilon_consensus.fasta results/LSCM4_Arrange_Assembly_by_RaGOO/ragoo_output/ragoo.fasta results/LSCM4_Clean_PolishedAssembly_by_funannotate/funannotate_Assembly.fasta results/Final_assembly/LSCM4_Genome.fasta
+
+Version: 5.0.1
+
+System information:
+  OS: Linux-4.15.0-132-generic-x86_64-with-glibc2.2.5 (linux_64)
+  Python version: 2.7.15
+  CPUs number: 24
+
+Started: 2021-04-07 18:15:47
+
+Logging to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/quast.log
+
+CWD: /home/data
+Main parameters: 
+  MODE: default, threads: 24, eukaryotic: true, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Contigs:
+  Pre-processing...
+  1  results/LSCM4_Assembly_LongRead_by_Flye/assembly.fasta ==> assembly
+  2  results/LSCM4_Assembly_LongRead_by_Flye/Flye_consensus.fasta ==> Flye_consensus
+  3  results/LSCM4_Polish_Assembly_by_Pilon/pilon.fasta ==> pilon
+  4  results/LSCM4_Polish_Assembly_by_Pilon/Pilon_consensus.fasta ==> Pilon_consensus
+  5  results/LSCM4_Arrange_Assembly_by_RaGOO/ragoo_output/ragoo.fasta ==> ragoo
+  6  results/LSCM4_Clean_PolishedAssembly_by_funannotate/funannotate_Assembly.fasta ==> funannotate_Assembly
+  7  results/Final_assembly/LSCM4_Genome.fasta ==> LSCM4_Genome
+
+2021-04-07 18:16:18
+Running Basic statistics processor...
+  Contig files: 
+    1  assembly
+    2  Flye_consensus
+    3  pilon
+    4  Pilon_consensus
+    5  ragoo
+    6  funannotate_Assembly
+    7  LSCM4_Genome
+  Calculating N50 and L50...
+    1  assembly, N50 = 1020162, L50 = 12, Total length = 34478885, GC % = 59.72, # N's per 100 kbp =  3.19
+    2  Flye_consensus, N50 = 1023034, L50 = 12, Total length = 34563691, GC % = 59.73, # N's per 100 kbp =  3.18
+    3  pilon, N50 = 1022025, L50 = 12, Total length = 34529424, GC % = 59.75, # N's per 100 kbp =  3.64
+    4  Pilon_consensus, N50 = 1023058, L50 = 12, Total length = 34564601, GC % = 59.74, # N's per 100 kbp =  3.64
+    5  ragoo, N50 = 1095675, L50 = 10, Total length = 32522116, GC % = 59.83, # N's per 100 kbp =  0.48
+    6  funannotate_Assembly, N50 = 1095675, L50 = 10, Total length = 32471852, GC % = 59.82, # N's per 100 kbp =  0.48
+    7  LSCM4_Genome, N50 = 1095675, L50 = 10, Total length = 32471852, GC % = 59.82, # N's per 100 kbp =  0.48
+  Drawing Nx plot...
+    saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/basic_stats/GC_content_plot.pdf
+  Drawing assembly GC content plot...
+    saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/basic_stats/assembly_GC_content_plot.pdf
+  Drawing Flye_consensus GC content plot...
+    saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/basic_stats/Flye_consensus_GC_content_plot.pdf
+  Drawing pilon GC content plot...
+    saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/basic_stats/pilon_GC_content_plot.pdf
+  Drawing Pilon_consensus GC content plot...
+    saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/basic_stats/Pilon_consensus_GC_content_plot.pdf
+  Drawing ragoo GC content plot...
+    saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/basic_stats/ragoo_GC_content_plot.pdf
+  Drawing funannotate_Assembly GC content plot...
+    saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/basic_stats/funannotate_Assembly_GC_content_plot.pdf
+  Drawing LSCM4_Genome GC content plot...
+    saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/basic_stats/LSCM4_Genome_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2021-04-07 18:16:34
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2021-04-07 18:16:38
+RESULTS:
+  Text versions of total report are saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/report.html
+  PDF version (tables and plots) is saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/report.pdf
+  Icarus (contig browser) is saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/icarus.html
+  Log is saved to /home/data/results/LSCM4_QC_Assemblies_by_QUAST/quast.log
+
+Finished: 2021-04-07 18:16:38
+Elapsed time: 0:00:50.546422
+NOTICEs: 1; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
