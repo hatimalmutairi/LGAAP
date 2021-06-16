@@ -1,4 +1,4 @@
-# LGAAP: *Leishmaniinae* Genome Assembly and Annotation Pipeline
+# LGAAP: *Leishmaniinae* Genomes Assembly and Annotation Pipeline
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4707445.svg)](https://doi.org/10.5281/zenodo.4707445)
 
