@@ -54,8 +54,16 @@ For further instrucion how to use snakemake, visit [Sankemake](https://snakemake
 ## Where to find the final output after runnning the pipeline
 ```results/annotation/{sample}/Final_Annotation/ ``` contains the final assemblies with annotated proteins and transcripts.
 
+## Metrics for Genomes Throughout the Assembly and Polishing Process ([QUAST](https://github.com/ablab/quast) reports)
+ - [*L. (M.) martiniquensis*](https://htmlpreview.github.io/?https://github.com/hatimalmutairi/LGAAP/blob/main/QUAST_reports/LSCM1_QC_Assemblies_by_QUAST/report.html)
+ - [*L. (M.) orientalis*](https://htmlpreview.github.io/?https://github.com/hatimalmutairi/LGAAP/blob/main/QUAST_reports/LSCM4_QC_Assemblies_by_QUAST/report.html)
+ - [*L. (M.) enriettii*](https://htmlpreview.github.io/?https://github.com/hatimalmutairi/LGAAP/blob/main/QUAST_reports/CUR178_QC_Assemblies_by_QUAST/report.html)
+ - [*L. (M.) sp.* Ghana](https://htmlpreview.github.io/?https://github.com/hatimalmutairi/LGAAP/blob/main/QUAST_reports/GH5_QC_Assemblies_by_QUAST/report.html)
+ - [*L. (M.) sp.* Namibia](https://htmlpreview.github.io/?https://github.com/hatimalmutairi/LGAAP/blob/main/QUAST_reports/JIQ42_QC_Assemblies_by_QUAST/report.html)
+ - [*Porcisia hertigi*](https://htmlpreview.github.io/?https://github.com/hatimalmutairi/LGAAP/blob/main/QUAST_reports/JKF63_QC_Assemblies_by_QUAST/report.html)
+
 ## Estimated Time of run
-This pipeline was tested successfully on a virtual machine with Ubuntu 18.04.5 LTS, 24 CPUs, and 120 GB of RAM. The job took 15377 minutes to complete (around 10 days). The evidence-based annotation took up the majority of the time, taking about 30 hours to finish for each genome.
+This pipeline was tested successfully on a virtual machine with Ubuntu 18.04.5 LTS, 24 CPUs, and 120 GB of RAM. The job took 15377 minutes to complete (around 10 days). The evidence-based annotation took up the majority of the time, taking about 30 hours to finish for each genome. We have not determined the minimal RAM requirements, nor have we conducted testing on other computing archetectures.
 
 ![Runtime](https://github.com/hatimalmutairi/LGAAP/blob/main/Runtime.png)
 
