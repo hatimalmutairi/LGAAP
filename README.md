@@ -59,7 +59,7 @@ For further instrucion how to use snakemake, visit [Snakemake](https://snakemake
 ## Where to find the final output after runnning the pipeline
 ```results/annotation/{sample}/Final_Annotation/ ``` contains the final assemblies with annotated proteins and transcripts.
 
-## Metrics for Genomes Throughout the Assembly and Polishing Process ([QUAST](https://github.com/ablab/quast) reports)
+## Metrics for genomes throughout the assembly and polishing pocess ([QUAST](https://github.com/ablab/quast) reports)
  - [*L. (M.) martiniquensis*](https://github.com/hatimalmutairi/LGAAP/blob/main/LSCM1_QC_Assemblies_by_QUAST/report.pdf)
  - [*L. (M.) orientalis*](https://github.com/hatimalmutairi/LGAAP/blob/main/LSCM4_QC_Assemblies_by_QUAST/report.pdf)
  - [*L. (M.) enriettii*](https://github.com/hatimalmutairi/LGAAP/blob/main/CUR178_QC_Assemblies_by_QUAST/report.pdf)
