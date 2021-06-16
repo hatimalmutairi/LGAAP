@@ -29,30 +29,30 @@ Running the entire pipeline took 15377 minutes to complete (around 10 days). The
 Before you start, make sure that [docker software](https://docs.docker.com/get-docker/) is already installed in your machine. 
  1. Use  ```git clone``` command to clone the repository to your working directory. you can also download it from  [zenodo](https://zenodo.org/record/4707445)
 ```sh
-$ git clone https://github.com/hatimalmutairi/LGAAP.git
+git clone https://github.com/hatimalmutairi/LGAAP.git
 ```
  2. Create a [conda](https://docs.conda.io/en/latest/) environment with [Snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) installed.
  Anaconda or miniconda must be installed already in youe machine.
 ```sh
-$ conda create -n LGAAP -c bioconda -c conda-forge snakemake -y
+conda create -n LGAAP -c bioconda -c conda-forge snakemake -y
 ```
  3. Activate the new environment
 ```
-$ conda activate LGAAP
+conda activate LGAAP
 ```
  4. Set the downloaded directory ad the working directory and  run the entire pipline
 ```sh
-$ snakemake --cores 8 --use-conda
+snakemake --cores 8 --use-conda
 ```
 The option ```--cores``` lets you choose how many CPUs to use.
  
  5. (Optional) Perform a dry run of Snakemake using the option ```--dry-run```
 ```sh
-$ snakemake --dry-run
+snakemake --dry-run
 ```
  6. (Optional) Create a rulegraph wth the following command similar to [this](https://github.com/hatimalmutairi/LGAAP/blob/main/rulegraph.svg)
 ```sh
-$ snakemake --rulegraph | dot -Tpng > rulegraph.png 
+snakemake --rulegraph | dot -Tpng > rulegraph.png 
 ```
 For further instrucion how to use snakemake, visit [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html) documentation
 
@@ -72,9 +72,9 @@ Each genome assembly was created in a separate execution file (all of them can b
 - [All rules details](https://github.com/hatimalmutairi/LGAAP/tree/main/workflow/rules)  
 - [All softwares used](https://github.com/hatimalmutairi/LGAAP/tree/main/workflow/rules/envs)
 
+## Command-lines
 Take note that the following command lines were included to demonstrate the main commands; however, attempting to use them directly may fail because the majority of the commands were configured to be executed inside either a conda environment or a docker container. Rather than that, it is recommended to run the snakemake pipeline commands, which will take care of all software and its dependencies.
 
-## Command-lines
 1. Assembly using [Flye](https://github.com/fenderglass/Flye) (v2.8.2)
 ```sh
 flye --nano-raw {input.longreads} --genome-size 35m --threads {threads} -o {output}
@@ -117,7 +117,7 @@ blastn -db {input.UniVec} -max_hsps 1 -max_target_seqs 1 -outfmt '6 qseqid qstar
 ```
 9. Mask contaminants using [Bedtools](https://github.com/arq5x/bedtools2) (v2.30.0)
 ```sh
-bedtools maskfasta -fi {input.fa1} -bed {input.bed1} -fo {output}
+bedtools maskfasta -fi {input.assembly} -bed {input.bed} -fo {output}
 ```
 10. QC using [GAAS](https://github.com/NBISweden/GAAS) (v1.2.0)
 ```sh
@@ -126,7 +126,7 @@ gaas_fasta_statistics.pl -f {input} -o {output}
 11. Detecting repeats using [RepeatModeler](https://github.com/Dfam-consortium/TETools)
 ```sh
 BuildDatabase -name {sample}_RepeatDB -engine ncbi {input}
-RepeatModeler -pa {threads} -engine ncbi -database {wildcards.sample}_RepeatDB
+RepeatModeler -pa {threads} -engine ncbi -database {sample}_RepeatDB
 ```
 12. Mask repeats using [RepeatMasker](https://github.com/Dfam-consortium/TETools) (v1.4)
 ```sh
@@ -138,17 +138,17 @@ TEclassTest.pl -r {input} > {output}
 ```
 14. Annotation using [MAKER](https://hub.docker.com/r/hatimalmutairi/lmgaap-maker) (v2.31.10)
 ```sh
-maker -fix_nucleotides -genome {input.g1} -base {wildcards.sample}_Round{1} maker_opts.ctl maker_bopts.ctl maker_exe.ctl
+maker -fix_nucleotides -genome {input.assembly} -base {sample}_{Round} maker_opts.ctl maker_bopts.ctl maker_exe.ctl
 gff3_merge -n -s -d {input} > {output}
 fasta_merge -d {input} > {output}
-maker_map_ids --prefix {wildcards.sample}_ --justify 5 {input} > {output}
-maker_functional_fasta {input.Uniprot} {input} {input.gff} > {output.gff}
-maker_functional_fasta {input.Uniprot} {input} {input.proteins} > {output.proteins}
-maker_functional_fasta {input.Uniprot} {input} {input.transcripts} > {output.transcripts}
+maker_map_ids --prefix {sample}_ --justify 5 {input} > {output}
+maker_functional_fasta {input.Uniprot} {input.assembly} {input.gff} > {output.gff}
+maker_functional_fasta {input.Uniprot} {input.assembly} {input.proteins} > {output.proteins}
+maker_functional_fasta {input.Uniprot} {input.assembly} {input.transcripts} > {output.transcripts}
 ```
 15. Annotation QC using [Genometools](https://quay.io/repository/biocontainers/genometools?tag=1.2.1--py27_0&tab=tags) (v1.2.1)
 ```sh
-gt gff3 -sort -tidy {input} | gt stat > {output}
+gt gff3 -sort -tidy {input.gff} | gt stat > {output}
 ```
 16. Processing annotation using [GAAS](https://github.com/NBISweden/GAAS) (v1.2.0)
 ```sh
@@ -156,12 +156,12 @@ gaas_maker_merge_outputs_from_datastore.pl -i {input} -o {output}
 ```
 17. Assign functional annotations using [Interproscan](https://github.com/blaxterlab/interproscan-docker) (v5.22-61.0) and [Blast+](https://github.com/ncbi/blast_plus_docs)
 ```sh
-blastp -num_threads {threads} -query {input} -db {input} -evalue 1e-6 -max_hsps 1 -max_target_seqs 1 -outfmt 6 -out {output}
-interproscan.sh -appl pfam -dp -f TSV -goterms -iprlookup -pa -t p -i {input} -o {output}
+blastp -num_threads {threads} -db {input} -evalue 1e-6 -max_hsps 1 -max_target_seqs 1 -outfmt 6 -query {input.proteins} -out {output}
+interproscan.sh -appl pfam -dp -f TSV -goterms -iprlookup -pa -t p -i {input.proteins} -o {output}
 ```
 18. Keep longest isoform using [AGAT](https://github.com/NBISweden/AGAT) (v0.6.0)
 ```sh
-agat_sp_keep_longest_isoform.pl -gff {input} -o {output}
+agat_sp_keep_longest_isoform.pl -gff {input.gff} -o {output}
 ```
 19. Create the final annotation file using [MAKER](https://hub.docker.com/r/hatimalmutairi/lmgaap-maker) (v2.31.10)
 ```sh
